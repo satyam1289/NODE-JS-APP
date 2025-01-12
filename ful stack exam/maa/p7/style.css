@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.subtitle {
+    display: inline-block;
+    margin: 10px 0 20px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.header input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 25px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.header input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.header input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.user-list {
+    background-color: #fff;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    align-content: start;
+}
+
+.user-list li {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info h4 {
+    margin: 0 0 10px;
+    color: #1a1a1a;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-info i {
+    color: #6366f1;
+    width: 16px;
+}
+
+.user-list li.hide {
+    display: none;
+}
+
+/* Scrollbar Styling */
+.user-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.user-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.user-list::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 4px;
+}
+
+.user-list::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+    .user-list {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .header {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin: 5px 0 15px;
+    }
+
+    .header input {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
